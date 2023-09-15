@@ -37,8 +37,6 @@ public class Manager {
                 break;
         }
     }
-
-    //allow user convert from binary
     public static void convertFromDecimal(String decimal) {
         int choice = displayConvert("decimal", "binary", "hexadecimal");
         switch (choice) {

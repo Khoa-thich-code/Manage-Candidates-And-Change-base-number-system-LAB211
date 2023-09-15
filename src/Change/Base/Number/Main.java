@@ -3,7 +3,6 @@ package Change.Base.Number;
 public class Main {
 
     public static void main(String[] args) {
-        //loop until user want to exit
         while (true) {
             int choice = Manager.menu();
             switch (choice) {

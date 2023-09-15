@@ -1,38 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Manager.Candidate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
-
-/**
- *
- * @author THAYCACAC
- */
 public class Validation {
 
     private final static Scanner in = new Scanner(System.in);
-    /*
-    \\d{10} user must be input 10 number
-    \\d* user can input more number or not
-     */
     private static final String PHONE_VALID = "^\\d{10}\\d*$";
-
-    /*
-    [A-Za-z0-9.-+%]+ user must be input from a-z ignore case,0-9 and .-+% least one times
-    @ user must be input "@"
-    [A-Za-z.-]+ user mustbe input from a-z ignore case, "." "-" least one times
-    \\. user must be input "."
-    [A-Za-z]{2,4} user must be input from a-z ignore 2 - 4 times
-     */
     private static final String EMAIL_VALID
             = "^[A-Za-z0-9.+-_%]+@[A-Za-z.-]+\\.[A-Za-z]{2,4}$";
 
-    //check user input number limit
     public static int checkInputIntLimit(int min, int max) {
-        //loop until user input correct
         while (true) {
             try {
                 int result = Integer.parseInt(in.nextLine().trim());
@@ -47,10 +25,7 @@ public class Validation {
             }
         }
     }
-
-    //check user input string
     public static String checkInputString() {
-        //loop until user input correct
         while (true) {
             String result = in.nextLine().trim();
             if (result.isEmpty()) {
@@ -61,13 +36,9 @@ public class Validation {
             }
         }
     }
-
-    //check user input y/Y or n/N
     public static boolean checkInputYN() {
-        //loop until user input correct
         while (true) {
             String result = checkInputString();
-            //check user input y/Y or n/N
             if (result.equalsIgnoreCase("Y")) {
                 return true;
             } else if (result.equalsIgnoreCase("N")) {
@@ -77,12 +48,9 @@ public class Validation {
             System.out.print("Enter again: ");
         }
     }
-
-    //check phone is number with minimum 10 characters
     public static String checkInputPhone() {
         while (true) {
             String result = checkInputString();
-            //check user input phone valid
             if (result.matches(PHONE_VALID)) {
                 return result;
             } else {
@@ -91,13 +59,9 @@ public class Validation {
             }
         }
     }
-
-    //check email with format <account name>@<domain>. (eg: annguyen@fpt.edu.vn)
     public static String checkInputEmail() {
-        //loop until user input correct
         while (true) {
             String result = checkInputString();
-            //check user input email valid
             if (result.matches(EMAIL_VALID)) {
                 return result;
             } else {
@@ -106,8 +70,6 @@ public class Validation {
             }
         }
     }
-
-    //check user input graduation rank
     public static String checkInputGraduationRank() {
         while (true) {
             String result = checkInputString();
@@ -122,8 +84,6 @@ public class Validation {
             }
         }
     }
-
-    //check id exist or not
     public static boolean checkIdExist(ArrayList<Candidate> candidates, String id) {
         for (Candidate candidate : candidates) {
             if (candidate.getId().equalsIgnoreCase(id)) {
@@ -133,8 +93,6 @@ public class Validation {
         }
         return true;
     }
-
-    //check experience must be smaller then age
     public static int checkInputExprience(int birthDate) {
         int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
         int age = yearCurrent - birthDate;
