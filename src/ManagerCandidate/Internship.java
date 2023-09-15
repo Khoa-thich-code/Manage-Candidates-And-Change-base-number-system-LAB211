@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 public class Internship extends Candidate {
 
     private String major;

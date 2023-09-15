@@ -1,5 +1,5 @@
 
-package Change.Base.Number;
+package ChangeBaseNumber;
 import java.util.Scanner;
 public class Validate {
 

@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 import java.util.ArrayList;
 public class Main {
 

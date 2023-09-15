@@ -1,5 +1,5 @@
 
-package Change.Base.Number;
+package ChangeBaseNumber;
 
 public class Manager {
 

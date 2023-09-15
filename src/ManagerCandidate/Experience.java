@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 public class Experience extends Candidate {
 
     private int yearExperience;

@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 
 public class Fresher extends Candidate {
 

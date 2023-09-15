@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 public class Candidate {
 
     private String id;

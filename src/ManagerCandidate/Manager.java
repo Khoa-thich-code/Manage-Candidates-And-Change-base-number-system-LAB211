@@ -1,5 +1,5 @@
 
-package Manager.Candidate;
+package ManagerCandidate;
 import java.util.ArrayList;
 import java.util.Calendar;
 public class Manager {
